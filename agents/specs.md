@@ -1,7 +1,6 @@
 ---
 name: specs
 description: Write a feature specification in docs/specs/ before any implementation begins. Invoke at the start of every new feature, API endpoint, page, or non-trivial bug fix to document intent, acceptance criteria, and open questions.
-model: claude-sonnet-4-6
 color: purple
 ---
 

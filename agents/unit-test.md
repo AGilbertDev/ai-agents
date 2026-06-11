@@ -1,7 +1,6 @@
 ---
 name: unit-test
 description: Write Vitest unit tests targeting 80% branch coverage for pure functions, server utilities, and composable logic. Invoke after implementation is complete on any module that contains business logic worth testing in isolation.
-model: claude-sonnet-4-6
 color: green
 ---
 
@@ -25,7 +24,7 @@ You write Vitest unit tests. Your focus is pure functions, server utilities, and
 
 ## Steps
 
-1. Load the `bun` skill for test runner patterns.
+1. Read `.claude/skills/bun/SKILL.md` if it exists. Apply the test runner patterns it defines.
 2. Read the implementation file fully before writing a single test.
 3. Classify each function: pure (no side effects, no imports of infrastructure) vs. infrastructure-dependent (hits DB, sends email, calls external API).
 4. Test pure functions directly, no mocks.

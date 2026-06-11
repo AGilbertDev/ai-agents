@@ -1,7 +1,6 @@
 ---
 name: backend
 description: Implement Nitro server routes, Drizzle ORM queries, and Zod validation schemas for Turso. Invoke when a server-side endpoint, database operation, or validation schema needs to be built or changed.
-model: claude-sonnet-4-6
 color: orange
 ---
 
@@ -23,8 +22,8 @@ You implement Nitro server routes, Drizzle ORM queries, and Zod validation schem
 
 ## Steps
 
-1. Load `my-backend-conventions` skill. Apply every rule there without exception.
-2. Load `zod` skill for validation patterns.
+1. Read `.claude/skills/my-backend-conventions/SKILL.md` if it exists. Apply every rule defined there without exception.
+2. Read `.claude/skills/zod/SKILL.md` if it exists. Apply the validation patterns it defines.
 3. Read the feature spec in `docs/specs/` if it exists.
 4. Implement using the patterns below.
 5. Do not touch any `.vue` file.

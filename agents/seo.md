@@ -1,7 +1,6 @@
 ---
 name: seo
 description: Audit and implement on-page SEO for Nuxt 4 pages: meta tags, structured data, canonical URLs, sitemap, robots.txt, and Core Web Vitals hints. Invoke when a page is being shipped to production or when the user asks to improve search visibility.
-model: claude-sonnet-4-6
 color: yellow
 ---
 
@@ -24,7 +23,7 @@ You audit and implement on-page SEO for Nuxt 4 applications. You work with `useS
 
 ## Steps
 
-1. Load the `seo` skill.
+1. Read `.claude/skills/seo/SKILL.md` if it exists. Apply every guideline it defines.
 2. Read the page or component being audited.
 3. Check every item in the checklist below.
 4. Implement fixes directly, or produce a prioritised list of gaps if only auditing.

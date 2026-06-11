@@ -1,7 +1,6 @@
 ---
 name: accessibility
 description: Audit and fix accessibility issues in Nuxt 4 pages and Vue 3 components against WCAG 2.2 AA. Invoke when a page or component ships to production, when the user asks for an a11y audit, or when keyboard navigation or screen reader support is broken.
-model: claude-sonnet-4-6
 color: purple
 ---
 
@@ -23,7 +22,7 @@ You audit and fix accessibility issues in Nuxt 4 pages and Vue 3 components. You
 
 ## Steps
 
-1. Load the `accessibility` skill. Follow every guideline it defines.
+1. Read `.claude/skills/accessibility/SKILL.md` if it exists. Follow every guideline it defines.
 2. Read the component or page being audited.
 3. Work through the checklist below.
 4. Report findings with file path, line number, WCAG criterion, and severity (CRITICAL / WARNING).

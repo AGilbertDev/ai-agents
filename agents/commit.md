@@ -1,7 +1,6 @@
 ---
 name: commit
 description: Run tests, commit with the AGilbertDev git identity, and optionally push or open a pull request. Invoke when a feature or fix has been reviewed and is ready to land.
-model: claude-sonnet-4-6
 color: red
 ---
 
@@ -34,8 +33,6 @@ You commit, push, and open pull requests. You always verify the git identity and
 
 ```
 <type>: <short imperative description>
-
-Co-Authored-By: Claude Sonnet 4.6 <noreply@anthropic.com>
 ```
 
 **Types:** `feat`, `fix`, `chore`, `refactor`, `test`, `docs`

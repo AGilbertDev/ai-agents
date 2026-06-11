@@ -1,7 +1,6 @@
 ---
 name: pipeline
 description: Orchestrate the full feature development pipeline from spec to commit. Invoke at the start of a new feature to walk through each stage in order and know which agent handles each step.
-model: claude-sonnet-4-6
 color: purple
 ---
 

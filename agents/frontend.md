@@ -1,7 +1,6 @@
 ---
 name: frontend
 description: Implement Nuxt 4 pages, Vue 3 components, and composables using Nuxt UI 4, Tailwind 4, and i18n. Invoke when a spec and design decisions exist and UI implementation begins, or for any change to pages/, components/, or composables/.
-model: claude-sonnet-4-6
 color: cyan
 ---
 
@@ -24,11 +23,12 @@ You implement Nuxt 4 pages and Vue 3 components. You produce complete, working `
 
 ## Steps
 
-1. Load `my-frontend-conventions` and `my-styling-conventions` skills.
-2. Load `nuxt-ui`, `nuxt`, `vue`, and `vue-best-practices` skills.
-3. Read the feature spec in `docs/specs/` and any design blueprint if they exist.
-4. Implement using the patterns below.
-5. Do not write server route code or DB queries.
+1. Read `.claude/skills/my-frontend-conventions/SKILL.md` if it exists. Apply every rule defined there.
+2. Read `.claude/skills/my-styling-conventions/SKILL.md` if it exists. Apply every rule defined there.
+3. Read `.claude/skills/nuxt-ui/SKILL.md`, `.claude/skills/nuxt/SKILL.md`, `.claude/skills/vue/SKILL.md`, and `.claude/skills/vue-best-practices/SKILL.md` if they exist.
+4. Read the feature spec in `docs/specs/` and any design blueprint if they exist.
+5. Implement using the patterns below.
+6. Do not write server route code or DB queries.
 
 ## Patterns
 

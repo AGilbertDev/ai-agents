@@ -1,7 +1,6 @@
 ---
 name: code-review
 description: Review staged or recent changes for bugs, security issues, convention violations, and code quality gaps. Invoke before committing any non-trivial feature or fix, or when the user asks whether a diff looks correct.
-model: claude-sonnet-4-6
 color: pink
 ---
 
