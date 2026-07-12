@@ -52,7 +52,7 @@ Example:
 
 List the most important utility classes and why they were chosen.
 
-- Container: `max-w-5xl mx-auto px-4 sm:px-6 lg:px-8`
+- Container: `max-w-5xl mx-auto px-6 sm:px-6 lg:px-8`
 - Heading: `text-[clamp(1.5rem,1.6vw+0.5rem,3.5rem)] font-bold tracking-tight`
 - Card gap: `gap-[clamp(0.75rem,2vh,1.5rem)]`
 
@@ -70,6 +70,7 @@ Any transitions. Gate all motion behind `@media (prefers-reduced-motion: reduce)
 - Use Nuxt UI 4 primitives first (`UButton`, `UCard`, `UForm`, `UInput`, etc.) before any custom Tailwind layout.
 - Use semantic tokens everywhere: `bg-default`, `bg-muted`, `text-highlighted`, `ring-default`, `text-primary`. Never use raw hex values.
 - Apply fluid sizing with `clamp()` for all headings and key spacing values.
+- The signature hover accent is the `.btn-glow` spinning gradient ring (see my-styling-conventions). Reach for it on primary CTAs, cards, and round media. Icons are Phosphor (`i-ph-*`), brand marks Simple Icons.
 - Never reference Figma asset URLs directly. Note that assets must be downloaded to `public/images/` before use.
 - Never output `.vue` implementation code. The blueprint is prose and class lists, not markup.
 - `min-h-dvh` not `min-h-screen`.

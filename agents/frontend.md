@@ -48,7 +48,7 @@ You implement Nuxt 4 pages and Vue 3 components. You produce complete, working `
 
 **Icons**
 
-- `i-carbon-*` for all general UI icons.
+- `i-ph-*` (Phosphor) for all general UI icons. Match the icon weight and size to the text it sits with (use `-bold` next to bold or large text).
 - `i-simple-icons-*` for brand logos only. Never the other way around.
 
 **i18n**
