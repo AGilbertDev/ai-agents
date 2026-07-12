@@ -22,18 +22,18 @@ Update this block at the start of every stage transition.
 
 ## Stage map
 
-| # | Stage | Agent | Applies when |
-|---|-------|-------|--------------|
-| 1 | Spec | `specs` | Always — no exceptions |
-| 2 | Design | `design` | Feature has any UI component or new page |
-| 3 | Frontend | `frontend` | Feature touches `pages/`, `components/`, or `composables/` |
-| 4 | Backend | `backend` | Feature touches server routes, DB, or Zod schemas |
-| 5 | Compliance | `compliance` | Feature handles personal data, auth, payments, or email |
-| 6 | SEO | `seo` | A new page is being shipped to production |
-| 7 | Accessibility | `accessibility` | A page or interactive component ships to production |
-| 8 | Unit tests | `unit-test` | Any module with business logic was changed |
-| 9 | Code review | `code-review` | Before every commit, no exceptions |
-| 10 | Commit | `commit` | Tests pass and review is clean |
+| #   | Stage         | Agent           | Applies when                                               |
+| --- | ------------- | --------------- | ---------------------------------------------------------- |
+| 1   | Spec          | `specs`         | Always — no exceptions                                     |
+| 2   | Design        | `design`        | Feature has any UI component or new page                   |
+| 3   | Frontend      | `frontend`      | Feature touches `pages/`, `components/`, or `composables/` |
+| 4   | Backend       | `backend`       | Feature touches server routes, DB, or Zod schemas          |
+| 5   | Compliance    | `compliance`    | Feature handles personal data, auth, payments, or email    |
+| 6   | SEO           | `seo`           | A new page is being shipped to production                  |
+| 7   | Accessibility | `accessibility` | A page or interactive component ships to production        |
+| 8   | Unit tests    | `unit-test`     | Any module with business logic was changed                 |
+| 9   | Code review   | `code-review`   | Before every commit, no exceptions                         |
+| 10  | Commit        | `commit`        | Tests pass and review is clean                             |
 
 ## Protocol
 
@@ -64,6 +64,7 @@ Before invoking `commit`, confirm: tests pass, code review is clean, git identit
 ## Skipping stages
 
 Skip a stage only when it genuinely does not apply. Acceptable skips:
+
 - Design, frontend: skip for backend-only work with no UI change.
 - Backend: skip for pure UI tweaks with no server or DB change.
 - Compliance: skip only when no personal data, auth, payments, or email are touched.

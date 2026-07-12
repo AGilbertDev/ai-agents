@@ -42,6 +42,7 @@ Describe each top-level section and its purpose.
 
 List the Nuxt UI 4 components and custom components, nested to show containment.
 Example:
+
 - UPageSection
   - UCard (rounded-2xl bg-default ring ring-default)
     - UButton color="primary" (primary CTA)
@@ -50,6 +51,7 @@ Example:
 ## Key Tailwind decisions
 
 List the most important utility classes and why they were chosen.
+
 - Container: `max-w-5xl mx-auto px-4 sm:px-6 lg:px-8`
 - Heading: `text-[clamp(1.5rem,1.6vw+0.5rem,3.5rem)] font-bold tracking-tight`
 - Card gap: `gap-[clamp(0.75rem,2vh,1.5rem)]`

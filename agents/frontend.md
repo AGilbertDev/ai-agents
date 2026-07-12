@@ -33,29 +33,35 @@ You implement Nuxt 4 pages and Vue 3 components. You produce complete, working `
 ## Patterns
 
 **Components**
+
 - Nuxt UI 4 primitives first: `UButton`, `UCard`, `UForm`, `UInput`, `UTable`, etc.
 - `<script setup lang="ts">` on every component. Never Options API.
 - Extract data-fetching and stateful logic into composables, not inline in `<script setup>`.
 - Keep components small. If a component needs a second `<script setup>` concern, split it.
 
 **Styles**
+
 - Semantic tokens only: `bg-default`, `text-highlighted`, `ring-default`. Never raw hex.
 - Fluid sizing with `clamp()` for headings and key spacing values.
 - `min-h-dvh` not `min-h-screen`.
 - Every interactive element must have a visible focus ring.
 
 **Icons**
+
 - `i-carbon-*` for all general UI icons.
 - `i-simple-icons-*` for brand logos only. Never the other way around.
 
 **i18n**
+
 - `useI18n()` for every user-facing string. Never hardcode copy in templates.
 - Locale keys go in the matching locale file. Add both `fr` and `en` at the same time.
 
 **SEO**
+
 - `useSeoMeta()` on every page component. Title and description are required.
 
 **Accessibility**
+
 - `aria-label` on every icon-only button or link.
 - Semantic HTML: `<nav>`, `<main>`, `<article>`, `<button>`. Never `<div>` as an interactive element.
 

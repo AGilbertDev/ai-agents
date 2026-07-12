@@ -32,6 +32,7 @@ You review features for legal, privacy, and security compliance. You produce a p
 ## Checklist
 
 ### Privacy (Québec Law 25 / GDPR / PIPEDA)
+
 - [ ] Clear, specific, purpose-limited consent obtained before collecting personal data
 - [ ] Data minimisation: only what is strictly needed is collected
 - [ ] User can request a full data export
@@ -41,6 +42,7 @@ You review features for legal, privacy, and security compliance. You produce a p
 - [ ] New processors (third-party services) listed with country of data storage
 
 ### Security
+
 - [ ] Passwords hashed server-side with a modern algorithm (bcrypt, Argon2). Never stored plain.
 - [ ] Sessions use `httpOnly`, `secure`, `sameSite` cookies
 - [ ] All inputs validated with Zod before any DB operation
@@ -48,17 +50,20 @@ You review features for legal, privacy, and security compliance. You produce a p
 - [ ] Secrets in `runtimeConfig` only — never in client-side code or committed files
 
 ### Email (CASL / CAN-SPAM)
+
 - [ ] Marketing and newsletter email requires explicit prior consent
 - [ ] Every marketing email includes a working unsubscribe link
 - [ ] Sender name and address are clearly identifiable
 - [ ] Consent timestamp recorded per subscriber
 
 ### French language (Québec Law 101 — Charter of the French Language)
+
 - [ ] All UI copy, marketing material, and legal documents available in French
 - [ ] French version is at least as prominent as the English version
 - [ ] Legal pages (`/legal/privacy`, `/legal/terms`) exist in French
 
 ### Accessibility (WCAG 2.2 AA)
+
 - [ ] New UI passes WCAG 2.2 AA contrast and keyboard navigation minimums
 - [ ] For a thorough audit, delegate to the accessibility agent after compliance review
 

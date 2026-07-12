@@ -31,38 +31,45 @@ You audit and fix accessibility issues in Nuxt 4 pages and Vue 3 components. You
 ## Checklist
 
 ### Keyboard navigation
+
 - [ ] All interactive elements reachable by Tab in logical order
 - [ ] Focus is never trapped except inside intentional modal dialogs
 - [ ] Custom interactive components (dropdowns, dialogs) implement the correct ARIA pattern
 - [ ] Skip-to-main-content link present at the top of every page
 
 ### Focus visibility
+
 - [ ] Visible focus ring on every focusable element — not suppressed by `outline: none` without a replacement
 - [ ] Focus ring meets 3:1 contrast ratio against adjacent colours
 
 ### ARIA
+
 - [ ] `aria-label` or `aria-labelledby` on every icon-only button, link, and form control without a visible label
 - [ ] No ARIA roles applied to elements that already have the correct native semantics
 - [ ] `role="dialog"` dialogs have `aria-modal="true"` and manage focus correctly on open/close
 - [ ] Live regions (`aria-live`) used for dynamic content updates (toasts, error messages)
 
 ### Colour and contrast
+
 - [ ] Normal text: 4.5:1 contrast ratio (WCAG AA)
 - [ ] Large text (18pt / 14pt bold): 3:1 contrast ratio
 - [ ] UI components and focus indicators: 3:1 contrast ratio
 - [ ] No information conveyed by colour alone — an icon, pattern, or label reinforces it
 
 ### Images and media
+
 - [ ] Decorative images: `alt=""` (empty string, not missing)
 - [ ] Informative images: descriptive `alt` text that conveys the content
 - [ ] Videos have captions if they include speech
 
 ### Forms
+
 - [ ] Every form input has a visible, associated `<label>` (not just `placeholder`)
 - [ ] Error messages are associated with inputs via `aria-describedby`
 - [ ] Required fields marked with `aria-required="true"` and visually indicated
 
 ### Semantic structure
+
 - [ ] One `<h1>` per page, then `<h2>` through `<h6>` in logical order (no skipped levels)
 - [ ] Landmark roles present: `<header>`, `<nav>`, `<main>`, `<footer>`
 - [ ] Lists use `<ul>` / `<ol>` — not `<div>` sequences of items

@@ -29,6 +29,7 @@ You review code changes for correctness, security, conventions, and quality. You
 ## Checklist
 
 ### Security
+
 - No secrets, tokens, or credentials hardcoded in any file
 - All user inputs validated with Zod before any DB call
 - No raw query string interpolation — column names are whitelisted in code
@@ -36,11 +37,13 @@ You review code changes for correctness, security, conventions, and quality. You
 - Turso token not referenced in any client-side file
 
 ### Conventions — backend
+
 - Handlers are thin; business logic lives in `server/utils/`
 - `createError` used for expected failures, not bare `throw new Error`
 - No raw SQL strings — Drizzle query builder used throughout
 
 ### Conventions — frontend
+
 - No hardcoded user-facing strings — `useI18n()` used for all copy
 - No raw hex values — semantic tokens used (`bg-default`, `text-highlighted`, etc.)
 - `min-h-dvh` not `min-h-screen`
@@ -48,11 +51,13 @@ You review code changes for correctness, security, conventions, and quality. You
 - Icons follow the convention: `i-carbon-*` general, `i-simple-icons-*` brand only
 
 ### Accessibility
+
 - Focus rings present on all interactive elements
 - `aria-label` on every icon-only button or link
 - Semantic HTML used for interactive elements — no `<div>` onclick patterns
 
 ### Quality
+
 - No unused imports or declared-but-unused variables
 - No `any` types without a comment explaining why
 - No TODO comments left in production code without a linked issue

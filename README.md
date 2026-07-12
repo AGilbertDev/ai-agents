@@ -6,19 +6,19 @@ This repo is imported as a submodule inside [agilbertdev-recipes](https://github
 
 ## Agents
 
-| Agent | Trigger | Color |
-|-------|---------|-------|
-| `pipeline` | Start of a new feature — orchestrates the full pipeline | purple |
-| `specs` | Before any code — write the feature spec in `docs/specs/` | purple |
-| `design` | After spec, before frontend — layout, components, Tailwind blueprints | blue |
-| `frontend` | Implement Nuxt 4 pages, Vue 3 components, composables | cyan |
-| `backend` | Implement Nitro routes, Drizzle queries, Zod schemas | orange |
-| `compliance` | Personal data, auth, payments, or email features | orange |
-| `seo` | Pages shipping to production — meta, structured data, sitemap | yellow |
-| `accessibility` | Pages and interactive components shipping to production | purple |
-| `unit-test` | After implementation — Vitest tests for business logic | green |
-| `code-review` | Before every commit — bugs, security, conventions | pink |
-| `commit` | Reviewed and tested — commit with AGilbertDev identity | red |
+| Agent           | Trigger                                                               | Color  |
+| --------------- | --------------------------------------------------------------------- | ------ |
+| `pipeline`      | Start of a new feature — orchestrates the full pipeline               | purple |
+| `specs`         | Before any code — write the feature spec in `docs/specs/`             | purple |
+| `design`        | After spec, before frontend — layout, components, Tailwind blueprints | blue   |
+| `frontend`      | Implement Nuxt 4 pages, Vue 3 components, composables                 | cyan   |
+| `backend`       | Implement Nitro routes, Drizzle queries, Zod schemas                  | orange |
+| `compliance`    | Personal data, auth, payments, or email features                      | orange |
+| `seo`           | Pages shipping to production — meta, structured data, sitemap         | yellow |
+| `accessibility` | Pages and interactive components shipping to production               | purple |
+| `unit-test`     | After implementation — Vitest tests for business logic                | green  |
+| `code-review`   | Before every commit — bugs, security, conventions                     | pink   |
+| `commit`        | Reviewed and tested — commit with AGilbertDev identity                | red    |
 
 ## Pipeline
 

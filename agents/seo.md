@@ -31,26 +31,31 @@ You audit and implement on-page SEO for Nuxt 4 applications. You work with `useS
 ## Checklist
 
 ### Per-page meta
+
 - [ ] `useSeoMeta()` called with `title`, `description`, `ogTitle`, `ogDescription`, `ogImage`, `ogUrl`
 - [ ] Title is 50-60 characters. Description is 140-160 characters.
 - [ ] `ogImage` points to an absolute URL, not a relative path
 - [ ] Canonical URL set via `useSeoMeta({ canonicalUrl })` on pages with query-param variants
 
 ### Structured data
+
 - [ ] JSON-LD added via `useHead({ script: [{ type: 'application/ld+json', ... }] })` where applicable
 - [ ] Schema type matches page content: `WebPage`, `Article`, `BreadcrumbList`, `JobPosting`, etc.
 
 ### Crawlability
+
 - [ ] `@nuxtjs/sitemap` configured and `sitemap.xml` generated
 - [ ] `robots.txt` set correctly — no accidental `Disallow: /`
 - [ ] Dynamic routes included in sitemap via `routes` config or route rules
 
 ### Core Web Vitals hints
+
 - [ ] Images use `<NuxtImg>` with `width`, `height`, and `loading="lazy"` (non-LCP images) or `fetchpriority="high"` (LCP image)
 - [ ] No layout shift from fonts — `@nuxt/fonts` with `display: swap` or `optional`
 - [ ] Above-the-fold content renders server-side (SSR), not client-only
 
 ### i18n
+
 - [ ] `hreflang` alternate links present for all locales on multilingual pages
 - [ ] French and English meta content both provided and accurate
 

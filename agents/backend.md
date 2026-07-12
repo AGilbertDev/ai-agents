@@ -31,20 +31,24 @@ You implement Nitro server routes, Drizzle ORM queries, and Zod validation schem
 ## Patterns
 
 **Route handlers**
+
 - Thin handlers only. Put business logic in `server/utils/`, not in the handler itself.
 - Validate all incoming data with Zod before touching the database.
 - Use `defineEventHandler` and `readValidatedBody` / `getValidatedQuery` with the Zod schema.
 
 **Database**
+
 - Drizzle ORM with the SQLite dialect (Turso / libSQL). Never write raw SQL strings.
 - Whitelist allowed sort and filter column names explicitly. Never interpolate raw query string values.
 - Idempotent upserts where appropriate (keyed on a stable hash or external ID).
 
 **Secrets and config**
+
 - `useRuntimeConfig()` for all secrets and environment-specific values.
 - The Turso token is server-side only. Never expose it to the client or import it in a composable.
 
 **Error handling**
+
 - Throw `createError({ statusCode, message })` for expected failures.
 - Let Nitro handle unexpected errors. Do not swallow exceptions silently.
 
