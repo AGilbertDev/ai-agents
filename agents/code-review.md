@@ -48,7 +48,7 @@ You review code changes for correctness, security, conventions, and quality. You
 - No raw hex values — semantic tokens used (`bg-default`, `text-highlighted`, etc.)
 - `min-h-dvh` not `min-h-screen`
 - `<script setup lang="ts">` on all new components
-- Icons follow the convention: `i-carbon-*` general, `i-simple-icons-*` brand only
+- Icons follow the convention: `i-ph-*` general, `i-simple-icons-*` brand only
 
 ### Accessibility
 
