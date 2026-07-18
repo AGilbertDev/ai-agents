@@ -86,3 +86,4 @@ If the user asks to skip specs or code review, state why those exist and ask onc
 - One agent per stage. Never combine two stages into a single call.
 - If an agent returns something incomplete, send it back to that agent before advancing.
 - Failing tests block the commit stage. No bypass.
+- The `unit-test` stage must run as a fresh agent, never the one that wrote the implementation, and it writes tests from the spec rather than the code. Independent, spec-driven authorship is what makes the tests validate intent instead of confirming whatever the code already does.
