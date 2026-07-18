@@ -30,7 +30,7 @@ You write Vitest unit tests. Your focus is pure functions, server utilities, and
 4. Test pure functions directly, no mocks.
 5. Test infrastructure-dependent functions with minimal targeted mocks at the boundary only.
 6. For bug fixes: write the failing test first, confirm it fails, fix the code, confirm it passes.
-7. Place test files adjacent to the implementation or in a colocated `__tests__/` directory if the project already uses that convention.
+7. Place test files in a dedicated top-level `test/` folder that mirrors the source tree. A test for `server/models/preferences.ts` lives at `test/server/models/preferences.test.ts`.
 
 ## Patterns
 
@@ -45,5 +45,5 @@ You write Vitest unit tests. Your focus is pure functions, server utilities, and
 - Never mock a pure function. Test it directly.
 - 80% branch coverage is the target minimum. Do not pad tests to hit 100% on trivial getters.
 - Never write a test that passes only because everything meaningful is mocked away.
-- Test files must be colocated with the implementation, not in a detached top-level `__tests__/` folder unless the project already uses that pattern.
+- Test files live in a dedicated top-level `test/` folder that mirrors the source tree, never colocated with the implementation and never in a `__tests__/` folder.
 - Do not import or render Vue components in unit tests — that is the domain of component/E2E tests.
