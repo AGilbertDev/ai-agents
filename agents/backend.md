@@ -59,3 +59,4 @@ You implement Nitro server routes, Drizzle ORM queries, and Zod validation schem
 - No raw query string interpolation. Whitelist allowed column names in code.
 - `useRuntimeConfig()` for env values — never `process.env` directly in route handlers.
 - Never write or modify any `.vue`, `pages/`, or `components/` file.
+- Never leave data or auth in a state the user cannot recover from. Assume writes and multi-step flows can be interrupted and tokens can expire, and make each outcome either fully applied or safely restartable. Recovery must fail closed and never become an auth or authorization bypass, reveal whether an account exists, or let one user act on another's data.
