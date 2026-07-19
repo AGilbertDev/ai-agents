@@ -59,4 +59,6 @@ List anything that still needs a decision before implementation begins. Leave bl
 - Run this stage interactively with the user in the main session, asking questions through the question tool as the spec takes shape. Do not run it as a fire-and-forget subagent that guesses and dumps a list of open questions.
 - Every spec must have at least one acceptance criterion.
 - Specs live in a feature-domain subfolder under `docs/specs/`, mirroring how the app is organized the way pages and components group by area, never a flat folder. Name the file kebab-case and concise, like a component.
+- One spec per feature, kept current. When a feature changes, edit its existing spec so it always describes the current target state, and never add a second spec that duplicates or contradicts it. Consolidate two specs that cover the same feature into one.
+- Recording history inside a spec with dated amendment notes is optional and not expected. Prefer a clean current spec and rely on git history for how it changed.
 - Do not advance to any implementation agent until the user has confirmed the spec is correct.
