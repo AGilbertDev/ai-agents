@@ -42,6 +42,12 @@ You implement Nitro server routes, Drizzle ORM queries, and Zod validation schem
 - Whitelist allowed sort and filter column names explicitly. Never interpolate raw query string values.
 - Idempotent upserts where appropriate (keyed on a stable hash or external ID).
 
+**List endpoints**
+
+- Paginate, sort, and search on the server. Accept `page`, `pageSize`, `sort`, `order`, and `search` as validated query params and return the page rows plus a `total` count.
+- Whitelist sortable columns with a Zod enum. Never pass a raw query-string value as a column name.
+- When the list merges more than one source in memory, filter and sort the full merged set before slicing the page.
+
 **Secrets and config**
 
 - `useRuntimeConfig()` for all secrets and environment-specific values.
@@ -57,6 +63,7 @@ You implement Nitro server routes, Drizzle ORM queries, and Zod validation schem
 - Validate every input at the server boundary with Zod before any DB operation.
 - Never expose the Turso token or any secret to the client.
 - No raw query string interpolation. Whitelist allowed column names in code.
+- List endpoints paginate, sort, and search on the server, never on the client. Return only the requested page plus a total count.
 - `useRuntimeConfig()` for env values — never `process.env` directly in route handlers.
 - Never write or modify any `.vue`, `pages/`, or `components/` file.
 - Never leave data or auth in a state the user cannot recover from. Assume writes and multi-step flows can be interrupted and tokens can expire, and make each outcome either fully applied or safely restartable. Recovery must fail closed and never become an auth or authorization bypass, reveal whether an account exists, or let one user act on another's data.

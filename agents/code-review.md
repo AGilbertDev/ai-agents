@@ -41,6 +41,7 @@ You review code changes for correctness, security, conventions, and quality. You
 - Handlers are thin; business logic lives in `server/utils/`
 - `createError` used for expected failures, not bare `throw new Error`
 - No raw SQL strings — Drizzle query builder used throughout
+- List endpoints paginate, sort, and search on the server, not the client, and return a total count with the page rows
 
 ### Conventions — frontend
 
