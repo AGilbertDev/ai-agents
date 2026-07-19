@@ -1,6 +1,8 @@
 # ai-agents
 
-Specialist Claude Code subagents for personal AGilbertDev projects. Each agent covers one stage of the feature development pipeline and delegates clearly — no two agents overlap in responsibility.
+Specialist Claude Code subagents for personal AGilbertDev projects. Each agent covers one stage of the feature development pipeline and delegates clearly, so no two agents overlap in responsibility.
+
+> Published for viewing and reference only. It is not open source. See [License](#license).
 
 This repo is imported as a submodule inside [agilbertdev-recipes](https://github.com/AGilbertDev/agilbertdev-recipes) and installed automatically when you run `bash .recipes/bin/install` in a new project.
 
