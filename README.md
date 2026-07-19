@@ -42,4 +42,8 @@ git submodule update --init --recursive
 bash .recipes/bin/install
 ```
 
-Agent files land in `.claude/agents/` as symlinks. That directory is gitignored — re-run the install script after cloning on a new machine.
+Agent files land in `.claude/agents/` as symlinks. That directory is gitignored, so re-run the install script after cloning on a new machine.
+
+## License
+
+All rights reserved. This code is published for viewing and reference only, and is not open source. See [LICENSE](./LICENSE).
