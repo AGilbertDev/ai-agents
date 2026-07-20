@@ -28,6 +28,7 @@ You commit, push, and open pull requests. You always verify the git identity and
 6. Commit using the format below.
 7. Push only if the user explicitly asks.
 8. Open a PR only if the user explicitly asks.
+9. After opening a PR, leave the working tree checked out on the feature branch so the user can run and test the change before merging. Report which branch is checked out. Never switch the working tree back to the base branch after opening a feature PR, and never merge on the user's behalf.
 
 ## Commit message format
 
@@ -67,3 +68,4 @@ Anything a reviewer should know: migration required, follow-up work, known limit
 - Never force-push unless the user explicitly requests it.
 - Never skip hooks with `--no-verify`.
 - Never commit `.env`, `.env.*`, or any file that matches the secrets deny rules.
+- After opening a feature PR, always leave the working tree checked out on the feature branch for the user to test. Never leave them on the base branch, and never merge on their behalf.

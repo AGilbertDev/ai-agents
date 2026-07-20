@@ -64,7 +64,7 @@ Then immediately invoke the next agent. If an agent hits an ambiguity the spec d
 Before invoking `commit`, confirm: tests pass, code review is clean, git identity is AGilbertDev. If any check fails, stop and name what needs fixing before continuing. The `commit` agent commits and opens the pull request, which ends the hands-off pass.
 
 **Step 6 — Pull-request review.**
-The opened pull request is the second and final human gate. The user reviews the diff and the CI report before merging. Do not merge on the user's behalf.
+The opened pull request is the second and final human gate. The user reviews the diff and the CI report before merging. Do not merge on the user's behalf. Leave the working tree checked out on the feature branch so the user can run and test the change locally before merging, and tell them which branch is checked out. Never leave them on the base branch after opening a feature PR.
 
 ## Skipping stages
 
