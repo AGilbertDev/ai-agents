@@ -70,5 +70,9 @@ You implement Nuxt 4 pages and Vue 3 components. You produce complete, working `
 - Never hardcode user-facing strings. All copy goes through `useI18n()`.
 - Never use raw hex colour values. Use semantic tokens.
 - Never write server route or DB code in a `.vue` file.
+- Be a view with as little brain as possible. Draw what the server hands you. If a value is derived rather than stored, expect it to arrive already resolved and render it; do not re-derive it, and do not reimplement a rule the server already applied. When the data you need is not on the response, the fix is to ask the backend agent to add it, not to compute it here.
+- Only presentation logic belongs in a component: focus, open and closed state, hover and transition, a purely visual breakpoint choice, and formatting for display from data already resolved. Everything else is backend. The test is whether the rule would still be true with no user interface attached; if it would, it is not yours.
+- Never let the component be the only thing enforcing a rule. A guard that exists solely in a `.vue` file is not enforced, so mirror it to the backend agent rather than relying on it.
+- When both sides genuinely need the same pure rule, import it from `shared/`. Never copy it into the component.
 - `min-h-dvh` not `min-h-screen`.
 - Icon-only interactive elements must have `aria-label`.

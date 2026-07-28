@@ -64,6 +64,9 @@ You implement Nitro server routes, Drizzle ORM queries, and Zod validation schem
 - Never expose the Turso token or any secret to the client.
 - No raw query string interpolation. Whitelist allowed column names in code.
 - List endpoints paginate, sort, and search on the server, never on the client. Return only the requested page plus a total count.
+- Own every decision the client would otherwise have to make. A derived value is resolved before it is sent, so the response carries the finished answer rather than a raw row plus the rules for reading it. This covers a status that depends on the current time, a total, a permission, an ordering, a filter, and a label chosen between several. A derived field with no column behind it is a legitimate part of a response; document it as derived on the response type.
+- Push the decision down to the data layer when the data layer can make it. Prefer deciding in the query, with a `CASE` expression or a computed column, over pulling rows into application code and looping over them. Pass any value the comparison needs, such as the current instant in the user's own timezone, as a bound parameter rather than letting the database guess it.
+- Never make the client responsible for a rule that must hold. A rule enforced only in a component is not enforced. If both sides genuinely need the same pure rule, it lives once in `shared/` and both import it; never keep a second copy on the server.
 - `useRuntimeConfig()` for env values — never `process.env` directly in route handlers.
 - Never write or modify any `.vue`, `pages/`, or `components/` file.
 - Never leave data or auth in a state the user cannot recover from. Assume writes and multi-step flows can be interrupted and tokens can expire, and make each outcome either fully applied or safely restartable. Recovery must fail closed and never become an auth or authorization bypass, reveal whether an account exists, or let one user act on another's data.
