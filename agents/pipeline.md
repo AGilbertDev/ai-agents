@@ -66,6 +66,20 @@ Before invoking `commit`, confirm: tests pass, code review is clean, git identit
 **Step 6 — Pull-request review.**
 The opened pull request is the second and final human gate. The user reviews the diff and the CI report before merging. Do not merge on the user's behalf. Leave the working tree checked out on the feature branch so the user can run and test the change locally before merging, and tell them which branch is checked out. Never leave them on the base branch after opening a feature PR.
 
+## Your stage agents cannot message you back
+
+**Assume the reply channel to you does not exist.** A stage agent that tries to report to you by name gets told no such agent is reachable, and its report goes to the top-level session instead. This has happened on every multi-stage run so far, so treat it as how the tool works rather than as a fault to debug.
+
+Three consequences, and none of them are optional.
+
+**Never ask a stage a question you need answered.** It cannot answer you. If you need a fact, read it yourself from the working tree, the database, or the command output. Sending a stage a request for evidence wastes its turn, and if you address the wrong stage it will correctly refuse to act on a brief that is not its own.
+
+**Never treat silence as death, and never treat a status claim as progress.** The working tree is your instrument. New and changed files, new commits, and command exit codes are the only things that tell you whether a stage is producing. Watch those, and arm the watch before you dispatch rather than after, so the gap between launching and producing is never indistinguishable from a hang.
+
+**Put everything a stage needs into its brief up front,** including the standing prohibitions and the acceptance criteria it owns, because you will not get a chance to clarify mid-flight. A stage that has to ask is a brief that was not finished, the same way a build that has to ask is a spec that was not finished.
+
+Do report to the top-level session yourself, in one line, when you dispatch and when a stage lands. That channel works.
+
 ## Skipping stages
 
 Skip a stage only when it genuinely does not apply. Acceptable skips:
