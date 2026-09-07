@@ -1,5 +1,7 @@
 # ai-agents
 
+> **Moved.** These agents now live in [`AGilbertDev/claude-plugins`](https://github.com/AGilbertDev/claude-plugins) as the `workflow` and `nuxt-conventions` plugins, with their history folded in. This repository is archived and kept for reference only.
+
 Specialist Claude Code subagents for personal AGilbertDev projects. Each agent covers one stage of the feature development pipeline and delegates clearly, so no two agents overlap in responsibility.
 
 > Published for viewing and reference only. It is not open source. See [License](#license).
